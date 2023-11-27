@@ -8,7 +8,7 @@ pub fn start_server(addr: &str) {
         "Initializing UDP server on".yellow(),
         addr.yellow()
     );
-    const BUFFER_LIMIT: usize = 2400;
+    const BUFFER_LIMIT: usize = 1500;
     let socket = UdpSocket::bind(addr).expect("Couldn't bind to address");
     println!("{} {}", "Success! Now listening on".green(), addr.green());
     let mut buf = [0; BUFFER_LIMIT];
